@@ -14,8 +14,8 @@ fortran_compiler:
 - gfortran
 fortran_compiler_version:
 - '10'
-mpich:
-- '4'
+mpi:
+- mpich
 numpy:
 - '1.18'
 pin_run_as_build:
