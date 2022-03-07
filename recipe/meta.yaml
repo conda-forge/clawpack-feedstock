@@ -43,6 +43,9 @@ requirements:
 test:
   imports:
     - clawpack.pyclaw
+    - clawpack.petclaw
+    - clawpack.pyclaw.fileio.hdf5
+    - clawpack.riemann.euler_4wave_2D
   requires:
     - pip
   commands:
