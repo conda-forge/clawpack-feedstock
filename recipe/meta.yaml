@@ -41,6 +41,7 @@ requirements:
     # temporary workaround to get stuff to work on osx-arm
     - petsc4py  # [osx and build_platform != target_platform]
     - {{ compiler('c') }}  # [osx and build_platform != target_platform]
+    - {{ compiler('cxx') }}  # [osx and build_platform != target_platform]
     - {{ compiler('fortran') }}  # [osx and build_platform != target_platform]
 
 test:
