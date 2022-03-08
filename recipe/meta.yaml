@@ -31,14 +31,17 @@ requirements:
     - {{ mpi }}
   run:
     - {{ mpi }}
+    - h5py * mpi_{{ mpi }}_*
     - python
     - six
     - numpy
     - scipy
     - matplotlib-base
     - mpi4py
+    # temporary workaround to get stuff to work on osx-arm
     - petsc4py  # [osx and build_platform != target_platform]
-    - h5py * mpi_{{ mpi }}_*
+    - {{ compiler('c') }}  # [osx and build_platform != target_platform]
+    - {{ compiler('fortran') }}  # [osx and build_platform != target_platform]
 
 test:
   imports:
