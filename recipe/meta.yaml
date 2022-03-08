@@ -37,7 +37,7 @@ requirements:
     - scipy
     - matplotlib-base
     - mpi4py
-    - petsc4py
+    - petsc4py  # [osx and build_platform != target_platform]
     - h5py * mpi_{{ mpi }}_*
 
 test:
