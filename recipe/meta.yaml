@@ -12,9 +12,10 @@ source:
   sha256: 06895806688e85aab141151f6d2077d67faf15595d3e6fd88a4d91eddceb88b2
 
 build:
-  script: {{ PYTHON }} -m pip install . -vv
-  number: 1
-  skip: yes  # [win]
+  script: 
+    - {{ PYTHON }} -m pip install . -vv  # [unix]
+    - "%PYTHON%" -m pip install . --no-deps -vv  # [win]
+  number: 2
 
 requirements:
   build:
@@ -23,7 +24,9 @@ requirements:
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ compiler('fortran') }}
+    - {{ compiler('m2w64_fortran') }}  # [win]
   host:
+    - libpython  # [win]
     - pip
     - python
     - numpy
