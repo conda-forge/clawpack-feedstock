@@ -14,7 +14,7 @@ source:
 build:
   script: 
     - {{ PYTHON }} -m pip install . -vv  # [unix]
-    - "%PYTHON%" -m pip install . --no-deps -vv  # [win]
+    - python -m pip install . --no-deps -vv  # [win]
   number: 2
 
 requirements:
