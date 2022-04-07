@@ -27,7 +27,7 @@ requirements:
   host:
     - pip
     - python
-    - setuptools
+    - setuptools <61
     - numpy
     - six
     - {{ mpi }}
