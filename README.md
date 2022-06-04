@@ -234,6 +234,3 @@ Feedstock Maintainers
 
 * [@ngam](https://github.com/ngam/)
 
-
-<!-- dummy commit to enable rerendering -->
-
