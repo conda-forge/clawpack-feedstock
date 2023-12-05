@@ -10,8 +10,6 @@ package:
 source:
   url: https://github.com/{{ name }}/{{ name }}/releases/download/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
   sha256: a3534d03e1fc9bc038e5e98c86b43e9df32351928b92bd01f73de31e39ad7208
-  patches:
-    - patches/64.patch
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
