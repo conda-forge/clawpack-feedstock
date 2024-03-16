@@ -1,5 +1,5 @@
 {% set name = "clawpack" %}
-{% set version = "5.9.0" %}
+{% set version = "5.9.2" %}
 
 {% set mpi = mpi %}
 
@@ -9,13 +9,11 @@ package:
 
 source:
   url: https://github.com/{{ name }}/{{ name }}/releases/download/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
-  sha256: 23a03713b23ec4253361c24ca3c7ab009188c53ce81f013fd8a3678cb0b9ada2
-  patches:
-    - patches/64.patch
+  sha256: a3534d03e1fc9bc038e5e98c86b43e9df32351928b92bd01f73de31e39ad7208
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
   skip: true  # [win]
 
 requirements:
@@ -30,6 +28,7 @@ requirements:
     - pip
     - python
     - setuptools <61
+    - meson-python
     - numpy
     - six
     - {{ mpi }}
