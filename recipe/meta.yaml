@@ -1,5 +1,5 @@
 {% set name = "clawpack" %}
-{% set version = "5.9.0" %}
+{% set version = "5.10.0" %}
 
 {% set mpi = mpi %}
 
@@ -9,13 +9,13 @@ package:
 
 source:
   url: https://github.com/{{ name }}/{{ name }}/releases/download/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
-  sha256: 23a03713b23ec4253361c24ca3c7ab009188c53ce81f013fd8a3678cb0b9ada2
+  sha256: a453331eeb7d708bfc958f869f8b1830fc8855a5a4bd0d4bad7c662b05f91abf
   patches:
     - patches/64.patch
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
   skip: true  # [win]
 
 requirements:
